@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* RESET **********************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html{
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --bg-body: oklch(19.1% .0043 264.47);
+    --bg-keys: #3f4752;
+    --bg-unknown: #757575;
+    --bg-known: #43a047;
+    --bg-semiknown: #e4a81d;
+    --bg-wrongkey: #222;
+}
+
+/* Body **********************/
+body {
+    background: var(--bg-body);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* H1 **********************/
+.h1{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+}
+
+/* WORDS CONTAINER **********************/
+.words-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* WORDS **********************/
+.word {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+
+/* LETTERS **********************/
+.letter {
+    height: 64px;
+    width: 64px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+} 
+
+.unknown {
+    background-color: var(--bg-unknown) !important;
+}
+
+.known {
+    background-color: var(--bg-known) !important;
+}
+
+.semiknown {
+    background-color: var(--bg-semiknown) !important;
+}
+
+.unplayed {
+    background-color: transparent !important;
+    border: 2px solid var(--bg-unknown);
+}
+
+/* KEYBOARD CONTAINER **********************/
+.kb-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* KEYBOARD ROWS **********************/
+.kb-row {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: nowrap;
+}
+
+/* KEYS **********************/
+.key {
+    height: 56px;
+    width: 46px;
+    background-color: var(--bg-keys);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.wrong {
+    background-color: var(--bg-wrongkey) !important;
+}
