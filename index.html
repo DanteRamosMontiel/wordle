@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="overlay">
+        <p class="overlay-p">
+            Insert the secret word<br>(5 letters)
+        </p>
+        <input class="input" type="text" placeholder="Type here">
+        <p class="error">
+            Error: Enter a 5-letter word.
+        </p>
+        <button class="submit">
+            SUBMIT
+        </button>
+    </div>
+
     <h1 class="h1">HOMEMADE WORDLE</h1>
 
     <div class="words-container">
@@ -45,43 +58,53 @@
             <div class="letter unplayed"></div>
             <div class="letter unplayed"></div>
         </div>
+        <p class="full-disclaimer">
+            <span class="disclaimer">
+                YOU WON! 
+            </span>
+            <br>
+            <span class="was">
+                THE WORD WAS
+            </span>
+            <span class="sword"></span>
+        </p>
     </div>
 
     <div class="kb-container">
         <div class="kb-row">
-            <div class="key">Q</div>
-            <div class="key">W</div>
-            <div class="key">E</div>
-            <div class="key">R</div>
-            <div class="key">T</div>
-            <div class="key">Y</div>
-            <div class="key">U</div>
-            <div class="key">I</div>
-            <div class="key">O</div>
-            <div class="key">P</div>
+            <div class="key" data-key="q">Q</div>
+            <div class="key" data-key="w">W</div>
+            <div class="key" data-key="e">E</div>
+            <div class="key" data-key="r">R</div>
+            <div class="key" data-key="t">T</div>
+            <div class="key" data-key="y">Y</div>
+            <div class="key" data-key="u">U</div>
+            <div class="key" data-key="i">I</div>
+            <div class="key" data-key="o">O</div>
+            <div class="key" data-key="p">P</div>
         </div>
         <div class="kb-row">
-            <div class="key">A</div>
-            <div class="key">S</div>
-            <div class="key">D</div>
-            <div class="key">F</div>
-            <div class="key">G</div>
-            <div class="key">H</div>
-            <div class="key">J</div>
-            <div class="key">K</div>
-            <div class="key">L</div>
-            <div class="key">Ñ</div>
+            <div class="key" data-key="a">A</div>
+            <div class="key" data-key="s">S</div>
+            <div class="key" data-key="d">D</div>
+            <div class="key" data-key="f">F</div>
+            <div class="key" data-key="g">G</div>
+            <div class="key" data-key="h">H</div>
+            <div class="key" data-key="j">J</div>
+            <div class="key" data-key="k">K</div>
+            <div class="key" data-key="l">L</div>
+            <div class="key" data-key="ñ">Ñ</div>
         </div>
         <div class="kb-row">
-            <div class="key">↩</div>
-            <div class="key">Z</div>
-            <div class="key">X</div>
-            <div class="key">C</div>
-            <div class="key">V</div>
-            <div class="key">B</div>
-            <div class="key">N</div>
-            <div class="key">M</div>
-            <div class="key">⌫</div>
+            <div class="key" data-key="enter">↩</div>
+            <div class="key" data-key="z">Z</div>
+            <div class="key" data-key="x">X</div>
+            <div class="key" data-key="c">C</div>
+            <div class="key" data-key="v">V</div>
+            <div class="key" data-key="b">B</div>
+            <div class="key" data-key="n">N</div>
+            <div class="key" data-key="m">M</div>
+            <div class="key" data-key="backspace">⌫</div>
         </div>
     </div>
 

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* RESET **********************/
 *,
 *::before,
@@ -12,6 +14,7 @@ body,
 html{
     height: 100%;
     width: 100%;
+    user-select: none;
 }
 
 :root{
@@ -21,6 +24,7 @@ html{
     --bg-known: #43a047;
     --bg-semiknown: #e4a81d;
     --bg-wrongkey: #222;
+    --bg-presskey: #3f4799;
 }
 
 /* Body **********************/
@@ -30,6 +34,94 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+/* OVERLAY **********************/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 10px;
+}
+
+.overlay input[type="text"] {
+    background-color: var(--bg-keys);
+    border: 2px solid var(--bg-unknown);
+    border-radius: 6px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 14px 24px;
+    width: 260px;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.overlay input[type="text"]::placeholder {
+    color: var(--bg-unknown);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    font-size: 16px;
+}
+
+.overlay input[type="text"]:focus {
+    border-color: white;
+    background-color: #4a5563;
+}
+
+.overlay .submit {
+    background-color: var(--bg-known);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    padding: 14px 48px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.overlay-p {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    font-style: italic;
+}
+
+.overlay .submit:hover {
+    background-color: #2e7d32;
+}
+
+.overlay .submit:active {
+    transform: scale(0.95);
+    background-color: #1b5e20;
 }
 
 /* H1 **********************/
@@ -45,6 +137,8 @@ body {
 .words-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     gap: 5px;
 }
 
@@ -71,6 +165,7 @@ body {
     font-weight: 700;
     font-style: normal;
     font-size: 40px;
+    transition: all 1s ease;
 } 
 
 .unknown {
@@ -88,6 +183,22 @@ body {
 .unplayed {
     background-color: transparent !important;
     border: 2px solid var(--bg-unknown);
+}
+
+
+/* RESULT DISCLAIMER **********************/
+.full-disclaimer {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: transparent;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sword {
+    font-style: italic;
 }
 
 /* KEYBOARD CONTAINER **********************/
@@ -122,6 +233,23 @@ body {
     font-weight: 700;
     font-style: normal;
     font-size: 30px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.key:hover {
+    transform: scale(1.04);
+    background-color: var(--bg-presskey);
+}
+
+.key:active{
+    transform: scale(0.9);
+}
+
+.active{
+    transition: all .1s;
+    transform: scale(0.9);
+    background-color: var(--bg-presskey);
 }
 
 .wrong {
