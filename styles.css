@@ -255,3 +255,30 @@ body {
 .wrong {
     background-color: var(--bg-wrongkey) !important;
 }
+
+/* MEDIA QUERY **********************/
+@media (max-width: 480px) {
+    
+    .kb-container {
+        gap: 2px;
+        padding: 0 4px; 
+    }
+
+    .kb-row {
+        gap: 2px;
+    }
+
+    
+    .key {
+        height: 50px;
+        width: 32px;
+        font-size: 20px;
+        border-radius: 4px;
+    }
+
+    .key[data-key="enter"],
+    .key[data-key="backspace"] {
+        width: 48px; 
+        font-size: 18px;
+    }
+}
